@@ -66,7 +66,8 @@
                     margin: 12px 0;
                     color: gray;
                 }
-                & button{
+                & button,
+                & a{
                     padding: 10px;
                     border: none;
                     border-radius: 12px;
@@ -74,6 +75,9 @@
                     font-size: medium;
                     font-weight: 600;
                     color: #eeeeee;
+                    & a{
+                        text-decoration: none
+                    }
                 }
             }
         }
