@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@mixin centered ($gap:4px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+}
+
+@mixin grid ($colNum, $gap:8px) {
+    display: grid;
+    grid-template-columns: repeat($colNum, 1fr);
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin space-between {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth
+}
+
+
+@import 'components/header';
+@import 'components/hero-section';
+@import 'components/course';
+@import 'components/about';
+@import 'components/contact';
+@import 'components/footer';
+@import 'responsive';

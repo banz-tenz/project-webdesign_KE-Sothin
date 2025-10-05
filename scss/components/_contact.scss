@@ -1,0 +1,101 @@
+
+
+@import url('../main.scss');
+
+
+.contact-section{
+    padding: 20px;
+    & .title {
+        width: 100%;
+        text-align: center;
+        & p {
+            font-size: 16px;
+            &:nth-child(1){
+                color: #e67e22;
+                font-weight: 700;
+            }
+            &:nth-last-child(1){
+                color: gray;
+            }
+        }
+        & h2 {
+            margin: 8px 0;
+            font-size: 28px;
+            font-size: 32px;
+            text-transform: uppercase;
+            font-weight: 1000;
+        }
+    }
+    & .social-medies{
+        @include centered(24px);
+        margin-top: 48px;
+        flex-wrap: wrap;
+        & a {
+            width: 180px;
+            height: 160px;
+            text-decoration: none;
+            align-content: center;
+            @include centered(20px);
+            flex-direction: column;
+            box-shadow: 2px 4px 8px gray;
+            border-radius: 12px;
+            & .contact-text {
+                color: black;
+            }
+            & .tele-icon {
+                font-size: 68px;
+                color: blue;
+                width: 70px;
+                height: 70px;
+                align-content: center;
+                border-radius: 100%;
+                margin-bottom: 12px;
+            }
+            & .icon {
+                // background-color: red;
+                font-size: 32px;
+                width: 100%;
+                text-align: center;
+                
+                & i {
+                    width: 70px;
+                    height: 70px;
+                    align-content: center;
+                    border-radius: 100%;
+                    color: white;
+                }
+                & .facebook {
+                    background-color: blue;
+                }
+                .tiktok {
+                    background-color: black;
+}
+                .youtube{
+                    background-color: red;
+                }
+                .contact-text {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+#text{
+    margin-top: 32px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+#email {
+    
+    // text-decoration: none;
+    text-align: center;
+    & a {
+        text-decoration: none;
+        padding: 12px 32px;
+        border-radius: 24px;
+        background-color: #3498db;
+        color: #eee;
+        font-weight: 600;
+    }
+}

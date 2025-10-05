@@ -1,0 +1,171 @@
+// laptop
+
+@media (min-width:1024px) {
+    .about-section{
+        & .leader-card{
+            margin: 10px 80px;
+        }
+        & .purposes{
+            & .purpose {
+                min-height: 300px;
+            }
+        }
+    }
+}
+
+
+
+// Tablat
+
+@media (max-width:1023px) {
+    .hero-section{
+        & .hero {
+            flex-direction: column;
+            & .left{
+                width: 90%;
+            }
+            & .right {
+                width: 70%;
+            }
+        }
+        & .goals {
+            padding: 20px;
+        }
+    }
+    .courses-section {
+        & .courses{
+            @include grid(2,48px)
+        }
+        & .comming {
+            @include grid(2, 48px)
+        }
+    }
+    .about-section{
+        & .leader-card {
+            margin: 60px 20px;
+        }
+        .purposes{
+            @include grid(2,40px)
+        }
+    }
+}
+
+
+
+// Mobile phone size L
+
+@media (max-width:767px) {
+    header{
+        & nav {
+            & .nav-menu{
+                display: none;
+            }
+            & .taggle{
+                display: block;
+            }
+        }
+    }
+
+    main {
+        overflow-x: hidden;
+    }
+    .hero-section{
+        & .hero{
+            padding: 10px;
+            & .left,
+            & .right{
+                width: 100%;
+            }
+            & .left{
+                text-align: center;
+            }
+            & .btn-group{
+                width: 100%;
+                justify-content: center;
+                
+            }
+        }
+        .goals{
+            @include grid(1, 32px)
+        }
+    }
+    .courses-section{
+        & .courses,
+        & .comming{
+            @include grid(1, 48px)
+        }
+        & .comming{
+            padding: 0px;
+        }
+    }
+    .about-section {
+        & .leader-card{
+            flex-wrap: wrap;
+            padding: 20px;
+            & .text{
+                text-align: center;
+                padding: 10px;
+                width: 100%;
+                & p {
+                    text-align: justify;
+                }
+                & .icon-group{
+                    justify-content: center;
+                }
+            }
+        }
+        & .purposes{
+            @include grid(1,48px);
+        }
+    }
+
+    footer {
+        @include grid(2,32px);
+        align-items: stretch;
+        & .aboutUs {
+            & p {
+            font-size: 14px;
+            }
+        }
+    }
+}
+
+
+// Mobile phone size M
+
+@media (min-width:320px) {
+    .hero-section{
+        & .right{
+            width: 100%;
+            position: relative;
+            left: -24%;
+        }
+    }
+    .about-section {
+        & .leader-card {
+            margin: 10px 0;
+        }
+        & .purposes{
+            padding: 0;
+            margin: 32px 0;
+            & .purpose{
+                align-content: center;
+                height: 300px;
+                & h2 {
+                    text-align: center;
+                }
+                & p {
+                    text-align: justify;
+                }
+            }
+        }
+        & .feedbacks{
+            & .feedback{
+                height: 460px;
+            }
+        }
+    }
+    footer {
+        @include grid(1, 32px)
+    }
+}

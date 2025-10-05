@@ -1,0 +1,157 @@
+@import url('../main.scss');
+
+
+.courses-section{
+    padding: 20px;
+    background-color: #eeeeee;
+    & .title {
+        width: 100%;
+        & p {
+            font-size: 16px;
+            &:nth-child(1){
+                color: #e67e22;
+                font-weight: 700;
+            }
+            &:nth-last-child(1){
+                color: gray;
+            }
+        }
+        & h2 {
+            margin: 8px 0;
+            font-size: 28px;
+        }
+    }
+    & .courses{
+        margin:40px 0px;
+        @include grid(3, 48px);
+        & .course{
+            height: 460px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 2px 4px 8px gray;
+            transition: all .5s ease-in-out;
+            &:hover{
+                transform: translateY(-16px);
+                box-shadow: 4px 6px 10px gray;
+                & .image{
+                    overflow: hidden;
+                    & img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            & .image{
+                width: 100%;
+                height: 50%;
+                
+                & img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform linear .5s;
+                }
+            }
+            & .text{
+                padding: 20px;
+                @include centered();
+                align-items: stretch;
+                flex-direction: column;
+                justify-content: end;
+                height: 50%;
+                & h3 {
+                    color: #e67e22;
+                    font-size: 24px;
+                }
+                & p {
+                    margin: 12px 0;
+                    color: gray;
+                }
+                & button{
+                    padding: 10px;
+                    border: none;
+                    border-radius: 12px;
+                    background-color: #e67e22;
+                    font-size: medium;
+                    font-weight: 600;
+                    color: #eeeeee;
+                }
+            }
+        }
+    }
+    & .comming{
+        @include grid(3, 48px);
+        width: 100%;
+        padding: 20px;
+        & .class{
+            overflow: hidden;
+            border-radius: 12px;
+            padding: 10px;
+            box-shadow: 2px 4px 8px gray;
+            height: 460px;
+            &:hover{
+                & .image{
+                    & span{
+                        transform: rotate(0deg);
+                    }
+                    & .bg {
+                        background: linear-gradient(360deg,gray, transparent);
+                    }
+                }
+            }
+            & .image{
+                position: relative;
+                width: 100%;
+                height: 50%;
+                display: inline-block;
+                & img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                & .bg {
+
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 100%;
+                    top: 0;
+                    left: 0;
+                    background: linear-gradient(360deg,gray,rgba(128, 128, 128, 0.559));
+                    z-index: 1;
+                    transition: background linear .3s;
+                }
+                & span {
+                    position: absolute;
+                    top: 100px;   
+                    left: 30%;
+                    transform: rotate(-20deg);
+                    background: red;
+                    color: white;
+                    padding: 6px 12px;
+                    border-radius: 6px;
+                    font-weight: 700;
+                    z-index: 2;
+                    transition: transform linear .3s;
+                }
+            }
+            & .text {
+                height: 50%;
+                padding: 20px;
+                @include centered();
+                align-items: stretch;
+                flex-direction: column;
+                justify-content: end;
+                & button {
+                    padding: 10px;
+                    border-radius: 8px;
+                    border: none;
+                    background-color: gray;
+                    color: #eeeeee;
+                    font-size: medium;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
