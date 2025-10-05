@@ -133,7 +133,7 @@
 
 // Mobile phone size M
 
-@media (min-width:320px) {
+@media (max-width:376px) {
     .hero-section{
         & .right{
             width: 100%;
